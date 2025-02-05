@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+      integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="navbar" class="bg-white fixed top-0 left-0 z-10 w-full">
+      <nav class="container flex items-center justify-between h-16 sm:h-20">
+        <!-- hamburger -->
+        <div class="cursor-pointer text-xl sm:text-2xl lg:hidden">
+          <i class="ri-menu-4-line" id="hamburger"></i>
+        </div>
+
+        <!-- logo -->
+        <img
+          src="assets/images/logo.png"
+          alt="logo"
+          class="w-28 md:w-40 lg:w-50"
+        />
+
+        <!-- menu items -->
+        <div
+          id="nav-menu"
+          class="bg-white absolute top-0 left-[-100%] min-h-[100vh] w-full border-b border-emerald-800 px-5 duration-500 ease-out overflow-hidden z-20 md:px-10 md:w-1/2 lg:static lg:border-none lg:min-h-fit lg:bg-transparent lg:w-auto"
+        >
+          <ul class="flex flex-col items-start gap-8 pt-20 lg:pt-0 lg:flex-row">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#shop" class="nav-link">Shop</a></li>
+            <li><a href="#ingredients" class="nav-link">Ingredients</a></li>
+            <li><a href="#blogs" class="nav-link">Blogs</a></li>
+          </ul>
+
+          <div
+            class="text-xl cursor-pointer absolute top-5 right-5 sm:text-2xl lg:hidden"
+          >
+            <i class="ri-close-large-line" id="closeicon"></i>
+          </div>
+          <div
+            class="flex gap-5 items-center text-xl cursor-pointer pt-20 sm:text-2xl lg:hidden"
+          >
+            <i class="ri-search-2-line"></i>
+            <i class="ri-user-3-line"></i>
+
+            <div class="relative">
+              <i class="ri-heart-3-line"></i>
+              <span
+                class="font-bold absolute bg-firstcolor text-white top-0 left-4 text-xs w-5 h-5 rounded-full grid place-items-center"
+                >0</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-5 items-center text-xl cursor-pointer sm:text-2xl">
+          <i class="hidden lg:block ri-search-2-line"></i>
+          <i class="hidden lg:block ri-user-3-line"></i>
+          <div class="hidden relative lg:block">
+            <i class="ri-heart-3-line"></i>
+            <span
+              class="font-bold absolute bg-firstcolor text-white top-0 left-4 text-xs w-5 h-5 rounded-full grid place-items-center"
+              >3</span
+            >
+          </div>
+          <div class="relative">
+            <i class="ri-shopping-cart-2-line"></i>
+            <span
+              class="font-bold absolute bg-firstcolor text-white top-0 left-4 text-xs w-5 h-5 rounded-full grid place-items-center"
+              >0</span
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="relative bg-yellow-300 text-center pt-32 pb-5 px-4 lg:pt-44"
+    >
+      <div class="hero_top md:space-y-5">
+        <h4>Loaded with Flavor</h4>
+        <h1>Refreshing Taste</h1>
+      </div>
+
+      <div
+        class="relative mt-8 max-w-sm mx-auto md:max-w-md md:mt-12 lg:max-w-lg xl:max-w-xl"
+      >
+        <img
+          src="assets/images/hero.png"
+          alt="hero"
+          class="hero_image w-full"
+        />
+        <img
+          src="assets/images/funny_monster_1.png"
+          alt="funny_monster_1"
+          class="hero_outline_1 w-14 absolute top-0 left-0 -rotate-45 opacity-50 sm:top-10 sm:left-5 md:w-16 lg:w-20"
+        />
+        <img
+          src="assets/images/funny_monster_2.png"
+          alt="funny_monster_2"
+          class="hero_outline_2 w-14 absolute top-0 right-0 rotate-45 opacity-50 sm:top-10 sm:right-5 md:w-16 lg:w-20"
+        />
+      </div>
+
+      <div class="hidden lg:block">
+        <img
+          src="assets/images/leaf_1.png"
+          alt="leaf_1"
+          class="hero_leaf_1 w-32 absolute top-40 right-20 blur-[1px] xl:right-40"
+        />
+        <img
+          src="assets/images/leaf_1.png"
+          alt="leaf_1"
+          class="hero_leaf_2 w-32 absolute bottom-32 left-20 blur-[1px] rotate-180 xl:left-40"
+        />
+        <img
+          src="assets/images/leaf_2.png"
+          alt="leaf_1"
+          class="hero_leaf_3 w-28 absolute top-32 left-20 blur-[2px] xl:left-40"
+        />
+        <img
+          src="assets/images/leaf_2.png"
+          alt="leaf_1"
+          class="hero_leaf_4 w-28 absolute bottom-40 right-20 blur-[2px] -rotate-90 xl:right-40"
+        />
+      </div>
+    </section>
+
+    <!-- Feature info -->
+    <section
+      class="container py-20 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20 xl:gap-32"
+    >
+      <div
+        class="feature_left flex flex-col gap-5 items-center text-center border-b-2 border-firstcolor border-dashed pb-10 md:flex-row md:text-start md:items-start md:gap-10"
+      >
+        <h2 class="min-w-max">
+          Top Ice <br />
+          Cream <br />
+          Spots
+        </h2>
+        <div class="md:mt-3">
+          <p class="mb-5">
+            It’s quite possible that we are living in the golden age of ice
+            cream innovation. Old-school creameries are churning out vanilla
+            bean masterpieces honed over generations while new shops are tossing
+            the term “chef”
+          </p>
+          <a
+            href="#"
+            class="font-semibold border-b border-black pb-1 hover:text-firstcolor hover:border-firstcolor duration-500"
+            >Read More</a
+          >
+        </div>
+      </div>
+      <div
+        class="feature_right flex flex-col gap-5 items-center text-center border-b-2 border-firstcolor border-dashed pb-10 md:flex-row md:text-start md:items-start md:gap-10"
+      >
+        <h2 class="min-w-max">
+          Wave <br />
+          Artisan <br />
+          Shops
+        </h2>
+        <div class="md:mt-3">
+          <p class="mb-5">
+            These ice cream shops represent everything that is well and good:
+            new-wave artisan shops challenging the very notion of what should be
+            placed on a cone (or stick, or between cookies), old-school parlors
+            learning…
+          </p>
+          <a
+            href="#"
+            class="font-semibold border-b border-black pb-1 hover:text-firstcolor hover:border-firstcolor duration-500"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo -->
+    <section
+      class="relative bg-[url(assets/images/promo_bg.jpg)] bg-cover bg-top pt-36 pb-24 md:pt-44"
+    >
+      <div class="container grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
+        <div class="promo_content flex flex-col gap-10">
+          <h2 class="text-black">Celebrate Sweetness Every Day</h2>
+          <p class="text-gray-500 font-medium max-w-md">
+            Incorporating liquor into ice cream feels like a small feat when you
+            think about how creative…
+          </p>
+          <ul class="space-y-5 pl-5 md:pl-10">
+            <li class="flex items-center gap-5 cursor-pointer">
+              <i
+                class="ri-snowflake-line text-3xl text-firstcolor xl:text-4xl"
+              ></i>
+              <p
+                class="text-xl font-Kalnia font-medium hover:text-firstcolor duration-300 xl:text-2xl"
+              >
+                Reliable Frozen Shipping
+              </p>
+            </li>
+            <li class="flex items-center gap-5 cursor-pointer">
+              <i class="ri-truck-line text-3xl text-firstcolor xl:text-4xl"></i>
+              <p
+                class="text-xl font-Kalnia font-medium hover:text-firstcolor duration-300 xl:text-2xl"
+              >
+                Affordable Flat-Rate Shipping Nationwide
+              </p>
+            </li>
+            <li class="flex items-center gap-5 cursor-pointer">
+              <i class="ri-box-3-line text-3xl text-firstcolor xl:text-4xl"></i>
+              <p
+                class="text-xl font-Kalnia font-medium hover:text-firstcolor duration-300 xl:text-2xl"
+              >
+                Picture-Perfect Unboxing
+              </p>
+            </li>
+            <li class="pt-10">
+              <button
+                class="bg-white font-semibold px-5 py-2 rounded-full hover:bg-firstcolor hover:text-white duration-500"
+              >
+                View More <i class="ri-arrow-right-line"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="assets/images/promo_1.png"
+          alt="promo"
+          class="promo_image w-full mx-auto md:w-[80%] lg:w-full xl:-mt-20"
+        />
+      </div>
+    </section>
+
+    <!-- shop -->
+    <section id="shop" class="py-20">
+      <h2 class="text-center">Explore Our Flavor</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper mt-8">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/images/product_1.jpg"
+              alt="product_1"
+              class="w-full"
+            />
+            <div class="mx-3">
+              <h3 class="text-xl font-bold mt-4">Sorbet Street Treats</h3>
+              <div>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <span class="text-gray-500">5 review</span>
+              </div>
+              <p class="mt-2 text-gray-600">$12.00</p>
+            </div>
+          </div>
+
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/images/product_2.jpg"
+              alt="product_1"
+              class="w-full"
+            />
+            <div class="mx-3">
+              <h3 class="text-xl font-bold mt-4">Blackout Chocolate Cake</h3>
+              <div>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <span class="text-gray-500">5 review</span>
+              </div>
+              <p class="mt-2 text-gray-600">$17.00</p>
+            </div>
+          </div>
+
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/images/product_3.jpg"
+              alt="product_1"
+              class="w-full"
+            />
+            <div class="mx-3">
+              <h3 class="text-xl font-bold mt-4">Sunshine</h3>
+              <div>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <span class="text-gray-500">1 review</span>
+              </div>
+              <p class="mt-2 text-gray-600">$12.00</p>
+            </div>
+          </div>
+
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/images/product_4.jpg"
+              alt="product_1"
+              class="w-full"
+            />
+            <div class="mx-3">
+              <h3 class="text-xl font-bold mt-4">Sorbet Street Treats</h3>
+              <div>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <span class="text-gray-500">5 review</span>
+              </div>
+              <p class="mt-2 text-gray-600">$12.00</p>
+            </div>
+          </div>
+
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <img
+              src="assets/images/product_5.jpg"
+              alt="product_1"
+              class="w-full"
+            />
+            <div class="mx-3">
+              <h3 class="text-xl font-bold mt-4">Darkest Chocolate Cake</h3>
+              <div>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <span class="text-gray-500">4 review</span>
+              </div>
+              <p class="mt-2 text-gray-600">$120.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Seasonal Promo -->
+    <section class="pt-20 grid grid-cols-1 sm:grid-cols-3">
+      <div class="relative overflow-hidden">
+        <img
+          src="assets/images/seasonal-promo_1.jpg"
+          alt="seasonal-promo-1"
+          class="w-full hover:scale-110 duration-700"
+        />
+        <div
+          class="absolute top-10 left-1/2 transform -translate-x-1/2 text-center pointer-events-none"
+        >
+          <h2 class="font-Playball lowercase text-white">hello</h2>
+          <h2 class="uppercase text-white">Summer!</h2>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden">
+        <img
+          src="assets/images/seasonal-promo_2.jpg"
+          alt="seasonal-promo-2"
+          class="w-full hover:scale-110 duration-700"
+        />
+        <div class="absolute top-1/2 left-1/4 pointer-events-none">
+          <div class="relative">
+            <img
+              src="assets/images/scalloped.svg"
+              alt="scalloped img"
+              class="w-24 lg:w-32"
+            />
+            <p
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold font-Playball text-white lg:text-4xl"
+            >
+              -32%
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden">
+        <img
+          src="assets/images/seasonal-promo_3.png"
+          alt="seasonal-promo-3"
+          class="w-full hover:scale-110 duration-700"
+        />
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center pointer-events-none"
+        >
+          <h2 class="uppercase text-white">creamy</h2>
+          <h2 class="font-Playball lowercase text-white">enjoy</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ingredients -->
+    <section class="py-20 bg-emerald-800 text-white" id="ingredients">
+      <div class="ingredients_top text-center pb-20 md:pb-32">
+        <h4 class="text-firstcolor">Savory Ingredients</h4>
+        <h2 class="text-white">Assorted Ingredients</h2>
+      </div>
+
+      <div class="container grid grid-cols-1 sm:grid-cols-2 gap-10 lg:px-40">
+        <!-- left side -->
+        <div class="flex flex-col gap-10 lg:gap-20">
+          <!-- item 1 -->
+          <div
+            class="ingredient_item_left flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/vanilla.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Vanilla</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div
+            class="ingredient_item_left flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/mango.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Mango</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div
+            class="ingredient_item_left flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/taro.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Taro</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div
+            class="ingredient_item_left flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/coconut.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Coconut</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="flex flex-col gap-10 lg:gap-20">
+          <!-- item 1 -->
+          <div
+            class="ingredient_item_right flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/cocoa.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Cocoa</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div
+            class="ingredient_item_right flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/strawberry.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Strawberry</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div
+            class="ingredient_item_right flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/green_tea.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Green Tea</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div
+            class="ingredient_item_right flex flex-col gap-3 items-center text-center md:flex-row md:items-start md:text-start md:gap-5 lg:max-w-sm xl:max-w-lg"
+          >
+            <img src="assets/images/orange.png" alt="item-1" class="w-28" />
+            <div class="space-y-3">
+              <h3>Orange</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hic,iste officiis. Ab error consequuntur aliquam eaque, alias
+                fuga aliquid consequatur minima ducimus nulla harum tempore
+                unde, quaerat ex dolore facilis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flavor Info -->
+    <section class="container py-12">
+      <div
+        class="grid grid-cols-1 place-items-center gap-y-10 sm:grid-cols-2 sm:gap-y-0 sm:gap-x-10 lg:grid-cols-4"
+      >
+        <!-- item 1 -->
+        <div
+          class="flavor_item max-w-sm text-white bg-cardcolor_1 py-10 px-6 text-center space-y-5"
+        >
+          <figure
+            class="w-full rounded-full border-[5px] border-white overflow-hidden"
+          >
+            <img
+              src="assets/images/flavor_image-1.jpg"
+              alt="flavor"
+              class="w-full"
+            />
+          </figure>
+          <h3>Vanilla</h3>
+          <p class="font-medium capitalize font-Playball">
+            Vanilla ice cream needs the absolute balance between sweetness,
+            fatness and bitterness that is very...
+          </p>
+          <button
+            class="bg-white h-12 w-12 text-black rounded-full text-2xl hover:bg-firstcolor hover:text-white duration-300"
+          >
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- item 2 -->
+        <div
+          class="flavor_item max-w-sm text-white bg-cardcolor_2 py-10 px-6 text-center space-y-5 sm:mt-20 lg:mt-40"
+        >
+          <figure
+            class="w-full rounded-full border-[5px] border-white overflow-hidden"
+          >
+            <img
+              src="assets/images/flavor_image-2.jpg"
+              alt="flavor"
+              class="w-full"
+            />
+          </figure>
+          <h3>Strawberry</h3>
+          <p class="font-medium capitalize font-Playball">
+            The primary ingredient is pureed fresh strawberries, setting it
+            apart from other strawberry-flavored milk...
+          </p>
+          <button
+            class="bg-white text-black h-12 w-12 rounded-full text-2xl hover:bg-firstcolor hover:text-white duration-300"
+          >
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- item 3 -->
+        <div
+          class="flavor_item max-w-sm text-white bg-cardcolor_3 py-10 px-6 text-center space-y-5"
+        >
+          <figure
+            class="w-full rounded-full border-[5px] border-white overflow-hidden"
+          >
+            <img
+              src="assets/images/flavor_image-3.jpg"
+              alt="flavor"
+              class="w-full"
+            />
+          </figure>
+          <h3>Orange</h3>
+          <p class="font-medium capitalize font-Playball">
+            The ice cream offers a sweet honey flavor paired with an orange
+            aroma, complemented by rich milk that is...
+          </p>
+          <button
+            class="bg-white text-black h-12 w-12 rounded-full text-2xl hover:bg-firstcolor hover:text-white duration-300"
+          >
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- item 4 -->
+        <div
+          class="flavor_item max-w-sm text-white bg-cardcolor_4 py-10 px-6 text-center space-y-5 sm:mt-20 lg:mt-40"
+        >
+          <figure
+            class="w-full rounded-full border-[5px] border-white overflow-hidden"
+          >
+            <img
+              src="assets/images/flavor_image-4.jpg"
+              alt="flavor"
+              class="w-full"
+            />
+          </figure>
+          <h3>Chocolate</h3>
+          <p class="font-medium capitalize font-Playball">
+            Vanilla ice cream needs the absolute balance between sweetness,
+            fatness and bitterness that is very...
+          </p>
+          <button
+            class="bg-white text-black h-12 w-12 rounded-full text-2xl hover:bg-firstcolor hover:text-white duration-300"
+          >
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blogs" class="container py-20">
+      <div class="blog_top text-center pb-12">
+        <h4>Our Blogs</h4>
+        <h2>Flavorful Upgrade</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <!-- cart 1 -->
+        <div class="blog_item relative overflow-hidden">
+          <img
+            src="assets/images/blog_1.jpg"
+            alt="blog"
+            class="w-full hover:scale-110 duration-700"
+          />
+          <div>
+            <div class="flex items-center gap-5 py-5">
+              <p class="uppercase cursor-pointer hover:text-firstcolor">
+                Business Tips
+              </p>
+              <p class="text-firstcolor">-</p>
+              <p class="text-firstcolor cursor-pointer">April 3, 2024</p>
+            </div>
+            <h3 class="hover:text-firstcolor font-medium cursor-pointer">
+              Trending Ice Cream Flavors for This Year
+            </h3>
+          </div>
+        </div>
+
+        <!-- cart 2 -->
+        <div class="blog_item relative overflow-hidden">
+          <img
+            src="assets/images/blog_2.jpg"
+            alt="blog"
+            class="w-full hover:scale-110 duration-700"
+          />
+          <div>
+            <div class="flex items-center gap-5 py-5">
+              <p class="uppercase cursor-pointer hover:text-firstcolor">
+                Business Tips
+              </p>
+              <p class="text-firstcolor">-</p>
+              <p class="text-firstcolor cursor-pointer">April 3, 2024</p>
+            </div>
+            <h3 class="hover:text-firstcolor font-medium cursor-pointer">
+              The Skill of Making Gourmet Ice Cream
+            </h3>
+          </div>
+        </div>
+
+        <!-- cart 3 -->
+        <div class="blog_item relative overflow-hidden">
+          <img
+            src="assets/images/blog_3.jpg"
+            alt="blog"
+            class="w-full hover:scale-110 duration-700"
+          />
+          <div>
+            <div class="flex items-center gap-5 py-5">
+              <p class="uppercase cursor-pointer hover:text-firstcolor">
+                Business Tips
+              </p>
+              <p class="text-firstcolor">-</p>
+              <p class="text-firstcolor cursor-pointer">April 3, 2024</p>
+            </div>
+            <h3 class="hover:text-firstcolor font-medium cursor-pointer">
+              Ice Cream Trends to Increase Revenue
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog_btn text-center py-12">
+        <button class="bg-firstcolor py-3 px-10 rounded-full text-white">
+          Read More
+        </button>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <footer class="bg-black text-white">
+      <div
+        class="newsletter container max-w-3xl py-20 space-y-5 text-center lg:space-y-10"
+      >
+        <h2>Sign up to our newsletter!</h2>
+        <p>Stay Updated on New Flavors and More</p>
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Your Email..."
+            class="p-5 pr-40 rounded-full w-full text-black outline-none lg:text-lg lg:pr-52"
+          />
+          <button
+            class="absolute top-1 right-1 bg-firstcolor text-white rounded-full px-5 py-4 lg:text-lg lg:px-10"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="fixed right-4 -bottom-1/2 h-12 w-12 text-white bg-firstcolor p-2 rounded-full uppercase h:translate-y-1 duration-300 cursor-pointer z-50"
+      id="scroll-up"
+    >
+      <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
